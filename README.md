@@ -14,10 +14,11 @@ To install this package just run:
 
 Here is an example of creating your cron job with cron-es6 package:
 
+*hello.cron.js* file
 ```
 const BaseCron = require('cron-es6');
 
-class Hello extends BaseCron {
+module.exports = class Hello extends BaseCron {
 
     constructor() {
         super('Hello', '* * * * * *');
@@ -25,7 +26,7 @@ class Hello extends BaseCron {
 
     //override
     onTick() {
-        console.log('***Hello from cron job.');
+        console.log('Hello from cron job.');
     }
 
     //override
@@ -34,6 +35,13 @@ class Hello extends BaseCron {
     }
 
 };
+
+```
+
+In some other .js file:
+
+```
+const Hello = require('hello.cron.js');
 
 let hello = new Hello();
 hello.start();
