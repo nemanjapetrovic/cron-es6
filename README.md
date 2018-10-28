@@ -41,7 +41,7 @@ module.exports = class Hello extends BaseCron {
 In some other .js file:
 
 ```
-const Hello = require('hello.cron.js');
+const Hello = require('./hello.cron');
 
 let hello = new Hello();
 hello.start();
