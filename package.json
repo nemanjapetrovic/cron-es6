@@ -1,6 +1,6 @@
 {
   "name": "cron-es6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES6 (ECMAScript 2015) node cron wrapper around https://www.npmjs.com/package/cron npm package.",
   "main": "index.js",
   "author": "Nemanja Petrovic <nempet@protonmail.com>",
