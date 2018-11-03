@@ -25,12 +25,12 @@ module.exports = class Hello extends BaseCron {
     }
 
     //override
-    onTick() {
+    async onTick() {
         console.log('Hello from cron job.');
     }
 
     //override
-    onComplete() {
+    async onComplete() {
         console.log('Finished.');
     }
 
@@ -51,10 +51,19 @@ hello.start();
 
 - start - starts the cron job
 - stop - stops the cron job
-- onTick - function which will be trigger on each tick
-- onComplete - function which will be triggerd when the job is stopped
+- *async* onTick - function which will be trigger on each tick
+- *async* onComplete - function which will be triggerd when the job is stopped
 - isCronRunning - checks if the cron job is running
 - getCronInstance - will return you an instance of *CronJob* from wrapped *[cron](https://www.npmjs.com/package/cron)* npm package
+
+# Cron Ranges
+
+- Seconds: 0-59
+- Minutes: 0-59
+- Hours: 0-23
+- Day of Month: 1-31
+- Months: 0-11 (Jan-Dec)
+- Day of Week: 0-6 (Sun-Sat)
 
 # [Contribution](https://github.com/nemanjapetrovic/cron-es6/blob/master/CONTRIBUTING.md)
 

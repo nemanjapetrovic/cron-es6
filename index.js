@@ -5,7 +5,7 @@ const cron = require('cron').CronJob;
  *
  * @class BaseCron
  */
-module.exports = class BaseCron {
+class BaseCron {
 
     /**
      * Creates an instance of BaseCron.
@@ -51,7 +51,7 @@ module.exports = class BaseCron {
      * @public
      * @memberof BaseCron
      */
-    onTick() {
+    async onTick() {
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
@@ -61,7 +61,7 @@ module.exports = class BaseCron {
      * @public
      * @memberof BaseCron
      */
-    onComplete() {
+    async onComplete() {
         throw new Error('ERR_METHOD_NOT_IMPLEMENTED');
     }
 
@@ -86,3 +86,5 @@ module.exports = class BaseCron {
     }
 
 };
+
+module.exports = BaseCron;

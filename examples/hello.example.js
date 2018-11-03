@@ -3,6 +3,10 @@
  */
 const BaseCron = require('../index');
 
+async function fooAsync() {
+    console.log('hello from async func');
+}
+
 let counter = 0;
 class Hello extends BaseCron {
 
@@ -10,8 +14,14 @@ class Hello extends BaseCron {
         super('Hello', '* * * * * *');
     }
 
-    onTick() {
-        console.log('***Hello from cron job.');
+    async onTick() {
+        console.log('Next tick:');
+
+        try {
+            await fooAsync();
+        } catch (err) {
+            console.log(err);
+        }
 
         counter++;
         if (counter === 3) {
@@ -19,8 +29,8 @@ class Hello extends BaseCron {
         }
     }
 
-    onComplete() {
-        console.log(`Complete successful: ${counter}`);
+    async onComplete() {
+        console.log(`------------\nComplete successful: ${counter}`);
         console.log(`is cron running: ${hello.isCronRunning()}`);
     }
 
@@ -29,4 +39,4 @@ class Hello extends BaseCron {
 let hello = new Hello();
 console.log('starting cron');
 hello.start();
-console.log(`is cron running: ${hello.isCronRunning()}`);
+console.log(`is cron running: ${hello.isCronRunning()}\n------------`);
