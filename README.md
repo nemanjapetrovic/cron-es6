@@ -51,8 +51,8 @@ hello.start();
 
 - start - starts the cron job
 - stop - stops the cron job
-- *async* onTick - function which will be trigger on each tick
-- *async* onComplete - function which will be triggerd when the job is stopped
+- *async* onTick - function which will be triggered on each tick
+- *async* onComplete - function which will be triggered when the job is stopped
 - isCronRunning - checks if the cron job is running
 - getCronInstance - will return you an instance of *CronJob* from wrapped *[cron](https://www.npmjs.com/package/cron)* npm package
 
