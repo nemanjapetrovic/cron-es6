@@ -65,9 +65,9 @@ hello.start();
 - Months: 0-11 (Jan-Dec)
 - Day of Week: 0-6 (Sun-Sat)
 
-# [Contribution](https://github.com/nemanjapetrovic/cron-es6/blob/master/CONTRIBUTING.md)
+# [Contribution](CONTRIBUTING)
 
-Feel free to contribute by forking this repository, making some changes, and submitting pull requests. For any questions or advice place an issue on this repository.
+Feel free to contribute by forking this repository, making changes, and submitting pull requests. For any questions or advice place an issue on this repository.
 
 # License
 
