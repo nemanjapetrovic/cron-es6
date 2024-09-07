@@ -19,7 +19,7 @@
     "node-cron-es6"
   ],
   "dependencies": {
-    "cron": "^1.8.2"
+    "cron": "^2.0.0"
   },
   "devDependencies": {
     "semistandard": "14.2.3"
